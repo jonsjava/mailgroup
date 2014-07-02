@@ -1,0 +1,67 @@
+/* ######################################################################################## */
+/* Mailer Group Solution -- Multi-User Mass Mailing System with opt out and Admin abilities */
+/* Copyright (C) 2008  Jon Harris                                                           */
+/*                                                                                          */
+/* This program is free software; you can redistribute it and/or                            */
+/* modify it under the terms of the GNU General Public License                              */
+/* as published by the Free Software Foundation.                                            */
+/*                                                                                          */
+/* This program is distributed in the hope that it will be useful,                          */
+/* but WITHOUT ANY WARRANTY; without even the implied warranty of                           */
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                            */
+/* GNU General Public License for more details.                                             */
+/*                                                                                          */
+/* You should have received a copy of the GNU General Public License                        */
+/* along with this program; if not, write to the Free Software                              */
+/* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.          */
+/* ######################################################################################## */
+REQUIREMENTS:
+MySQL5(maybe 4, but I coded on 5)
+PHP5(same as above)
+Web Server able to serve out PHP files
+basic knowledge of modifying a config file
+
+
+
+You can contact the developer by emailing: webmaster@jonsjava.com
+or visit http://jonsjava.com
+
+
+
+
+INSTALLATION
+The configuration is pretty straightforward:
+Step 1: create a MySQL database
+Step 2: modify config.inc.php
+	change $host to the host of your mysql server (usually won't need to change, though)
+	change $db to reflect the database you just created
+	change $db_user to the database user that has rights to that database.
+	change $db_password to the afore mentioned database users password
+	change the $web_addr to the address of your site (not the folder, that comes later, and no trailing slash),
+	change the $server_root to the path (web root) of your install. if your install is http://example.com/mailer/,
+		web root is /mailer/ (I know, I said server root, but I had a typo, and didn't wanna go through
+		changing all the scripts to reflect the true phrase)
+	change $list_name to whatever you want to name this install. This is how the database distinguishes all the data
+		from one install to the next (if you use the same database for multiple installs) Don't leave this field blank
+Step 3: open the installer in a web browser (http://example.com/<installed folder>/installer)
+	follow the instructions
+	REMOVE THE INSTALLER FOLDER AFTER YOU ARE COMPLETE!
+Step 4: Create some users, moderators, and supervisors.
+Step 5: Test it out before going live
+
+
+
+
+NOTES:
+The system has a "shutdown system" feature. If you run that script, nobody will be able to log into the user portion,
+but you will still be able to log into the admin portion. When you are installing, I reccomend you use a different system
+password from your admin password, and keep it secret. 
+
+You will need to create your own terms of service after installing, because I'm no lawyer, and I don't wanna write
+like a lawyer.
+
+Updates will come as I get the time. If you would like to contribute to this project, feel free to contact me, and I will
+look at your work. This project took about a week to write, and another week to fine-tune. If you can do better, by all means,
+show me!  I have a major headache after all this.
+
+Time to get a beer.

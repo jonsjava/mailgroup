@@ -1,0 +1,76 @@
+/* ######################################################################################## */
+/* Mailer Group Solution -- Multi-User Mass Mailing System with opt out and Admin abilities */
+/* Copyright (C) 2008  Jon Harris                                                           */
+/*                                                                                          */
+/* This program is free software; you can redistribute it and/or                            */
+/* modify it under the terms of the GNU General Public License                              */
+/* as published by the Free Software Foundation.                                            */
+/*                                                                                          */
+/* This program is distributed in the hope that it will be useful,                          */
+/* but WITHOUT ANY WARRANTY; without even the implied warranty of                           */
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                            */
+/* GNU General Public License for more details.                                             */
+/*                                                                                          */
+/* You should have received a copy of the GNU General Public License                        */
+/* along with this program; if not, write to the Free Software                              */
+/* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.          */
+/* ######################################################################################## */
+
+PLEASE REFER TO THE README FILE FOR INSTALL INSTRUCTIONS
+
+CURRENT VERSION(v1.18)
+-------------------------------------------------------------
+
+-----
+/root_folder/index.php
+Added instructions to handle storing client names
+Reworked some code so the on show_all_contacts, you will see "Contact name(Contact@email)"
+
+
+----
+/root_folder/add_contacts.php
+Added script to handle storing client names (mainly just added an array, and
+modified the query so it would store it)
+
+Modified the mailer to add the contacts name to the verification email
+
+
+----
+/root_folder/send_email.php
+modified the to field to add the contacts name
+modified the admin to add the mail groups name
+
+
+----
+/root_folder/admin/add_user.php
+added group_name to the user add sql
+
+
+----
+/root_folder/admin/update_user.php
+populated file (forgot to in last release) works now!
+
+
+----
+/root_folder/admin/index.php
+added group_name to add_user and show_all_users. 
+Changed username to read-only (no need to change users names).
+
+
+----
+/root_folder/installer/index.php
+Added the group_name row to the users table
+added the updater script, for people upgrading from the previous version (v1)
+
+
+----
+
+
+-------------------------------------------------------------
+PREVIOUS VERSION(v1)
+----
+
+
+First release
+-------------------------------------------------------------
+
